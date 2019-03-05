@@ -1,0 +1,19 @@
+include ../components/head/head
+include ../components/card-list/card-list
+include ../components/card-slider/card-slider
+include ../components/footer/footer
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        main.main
+            +card-list(cards)
+            +card-slider(cards)
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();

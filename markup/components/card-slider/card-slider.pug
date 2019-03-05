@@ -1,0 +1,21 @@
+mixin card-slider(data)
+    script
+        | var sliderItems = [];
+        | $.ajax({
+        |   url: "_slider-data.html",
+        |   success: function (result) {
+        |       $(".card",result).each( function(i) {
+        |           return sliderItems.push(this.outerHTML);
+        |       });
+        |   },
+        |   async: false
+        | });
+
+    .card-slider
+      h3.block-hd.card-slider__hd Слайдер карточек
+      .card-slider__box
+
+    script
+        | $(".card-slider__box").lazySlider({
+        |    items: sliderItems
+        | });

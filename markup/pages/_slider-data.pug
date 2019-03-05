@@ -1,0 +1,6 @@
+include ../components/card-list/card-list
+mixin card-slider-data(items)
+    each item in items
+        +card(item)
+div
+    +card-slider-data(cards)

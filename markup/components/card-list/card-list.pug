@@ -1,0 +1,8 @@
+include ../card/card
+
+mixin card-list(items)
+    .card-list
+      h3.block-hd.card-list__hd Список карточек
+      .card-list__box
+          each item in items.slice(0, 10)
+            +card(item)
