@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
-
+<html lang="ru">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -10,10 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta content="telephone=no" name="format-detection" />
         <meta name="HandheldFriendly" content="true" />
-
-        <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="static/css/mainq80x7mzyxqcor4g6i529.min.css" rel="stylesheet" type="text/css">
-        <!--<![endif]-->
         <meta property="og:title" content="#{data.title}" />
         <meta property="og:title" content="" />
         <meta property="og:url" content="" />
@@ -25,10 +20,8 @@
         <meta property="twitter:description" content="" />
         <link rel="image_src" href="" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <script src="static/js/mainq80x7mzyxqcor4g6i529.min.js"></script>
-        <script>
-            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
-        </script>
+        <link href="static/css/main.css" rel="stylesheet" type="text/css">
+        <script src="static/js/main.js"></script>
     </head>
 
     <body>
@@ -248,25 +241,13 @@
                     </div>
                 </div>
             </div>
-            <script>
-                var sliderItems = [];
-                $.ajax({
-                  url: "_slider-data.html",
-                  success: function (result) {
-                      $(".card",result).each( function(i) {
-                          return sliderItems.push(this.outerHTML);
-                      });
-                  },
-                  async: false
-                });
-            </script>
             <div class="card-slider">
                 <h3 class="block-hd card-slider__hd">Слайдер карточек</h3>
                 <div class="card-slider__box"></div>
             </div>
             <script>
                 $(".card-slider__box").lazySlider({
-                   items: sliderItems
+                   items: window.sliderItems
                 });
             </script>
             <footer class="footer"></footer>

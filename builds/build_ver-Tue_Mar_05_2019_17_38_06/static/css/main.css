@@ -14612,6 +14612,27 @@ html, body {
   font-size: 30px;
 }
 
+.card-list {
+  display: block;
+}
+
+.card-list__box, .lazy-slider__items {
+  margin: auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% - 80px);
+}
+
 .card {
   display: inline-block;
   vertical-align: top;
@@ -14858,25 +14879,8 @@ A.card-rate, A.card-rate:hover {
   content: "Убрать из избранного";
 }
 
-.card-list {
+.card-slider__box {
   display: block;
-}
-
-.card-list__box, .lazy-slider__items {
-  margin: auto;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: calc(100% - 80px);
 }
 
 .lazy-slider {
@@ -14921,5 +14925,4 @@ A.card-rate, A.card-rate:hover {
 
 .footer {
   display: block;
-  min-height: 400px;
 }
